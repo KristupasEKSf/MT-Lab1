@@ -7,9 +7,11 @@
   <!--
   Embed needed js libraries for video player. Note, libraries needs to be hosted on your server, under /js folder.
    -->
+<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
   <!--
   Location for CSS if needed. Note, cascade style sheets needs to be hosted on your server, under /css folder.
   -->
+<link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
    
 
 
@@ -17,9 +19,17 @@
 <body>
   <h1>My first HLS player</h1>
   
-  <!--
-  location for your player window
-  -->
+  <video id='my-video' class='video-js' controls preload='auto' width='640' height='264'
+  poster='MY_VIDEO_POSTER.jpg' data-setup='{}'>
+    <source src='MY_VIDEO.mp4' type='video/mp4'>
+    <source src='MY_VIDEO.webm' type='video/webm'>
+    <p class='vjs-no-js'>
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+    </p>
+  </video>
+
+  <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
   
 	<button type="button">Play</button>
 	<button type="button">Pause</button>
